@@ -23,7 +23,7 @@ export default function Starships() {
 									<Starship uid={starship.uid} name={starship.name} url={starship.url} />
 								</div>
 							);
-						})}
+						})}git lock
 				</div>
 			</div>
 		</div>
