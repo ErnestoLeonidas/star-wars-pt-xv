@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 export default function Films() {
 	const { store } = useContext(Context);
 	const { films } = store;
-	console.log(films);
+	// console.log(films);
 
 	return (
 		<div>

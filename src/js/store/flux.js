@@ -52,6 +52,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 						setStore({ films: data.result });
 					})
 					.catch(() => {});
+			},
+
+			getStarShips: url => {
+				console.log(url);
+				fetch(url, {})
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						//console.log(data.result);
+						setStore({ starships: data.results });
+					})
+					.catch(() => {});
 			}
 		}
 	};
