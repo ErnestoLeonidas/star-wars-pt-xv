@@ -1,3 +1,50 @@
-/* 
-    General Styles
-*/
+@font-face {
+    font-family: swfont;
+    src: url(../fonts/Starjedi.ttf);
+  }
+
+.swlogo {
+    height: 30px;
+}
+
+.swfont{
+    font-family: swfont;
+    color: #ffc107;
+}
+
+.bg-dark{
+    background-color: black !important;
+}
+
+body{
+    //background-color: black;
+    background-image: url(../img/space.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #303030;
+}
+
+.footersws {
+    background-color: #303030;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+  }
+
+.card {
+    border-color: #edec51;
+    border-width: 1px;
+    background-color:  rgba(40, 39, 39, 0.7);
+    // background-color: #282727 ;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+}
+
+.btn-card {
+    border-color: greenyellow;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #9e4f60;
+}

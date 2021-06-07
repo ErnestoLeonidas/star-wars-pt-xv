@@ -7,22 +7,22 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "webpack-dev-server --config webpack.dev.js --host 0.0.0.0 --port 3000",
+		"start": "webpack-dev-server --config webpack.dev.js --host localhost --port 3000",
 		"build": "webpack --config webpack.prod.js",
 		"deploy": "node deploy-to-github.js"
 	},
 	"author": {
-		"name": "Alejandro Sanchez",
-		"url": "http://alesanchezr.com/"
+		"name": "Ernesto Velásquez",
+		"url": "https://github.com/ErnestoLeonidas"
 	},
 	"contributors": [
 		{
-			"name": "Alejandro Sanchez",
-			"url": "http://alesanchezr.com/"
+			"name": "Ernesto Velásquez",
+			"url": "https://github.com/ErnestoLeonidas"
 		},
 		{
-			"name": "Ignacio Cordoba",
-			"url": "http://github.com/nachovz"
+			"name": "Ernesto Velásquez",
+			"url": "https://github.com/ErnestoLeonidas"
 		}
 	],
 	"license": "ISC",
@@ -77,7 +77,9 @@
 		]
 	},
 	"dependencies": {
-		"bootstrap": "^4.3.1",
+		"@popperjs/core": "^2.9.2",
+		"bootstrap": "^4.6.0",
+		"popper.js": "^1.16.1",
 		"prop-types": "^15.6.1",
 		"react": "^16.8.4",
 		"react-dom": "^16.8.4",
