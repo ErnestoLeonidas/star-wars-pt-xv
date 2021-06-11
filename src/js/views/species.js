@@ -2,25 +2,24 @@ import React, { useContext } from "react";
 import Card from "../component/card";
 import { Context } from "../store/appContext";
 
-export default function People() {
+export default function Species() {
 	const { store } = useContext(Context);
-	const { people } = store;
-	// console.log(starships);
+	const { species } = store;
 
 	return (
 		<div>
 			<div className="container-fluid">
 				<div className="row justify-content-center swfont">
-					<h1>People</h1>
+					<h1>Species</h1>
 				</div>
 				<div className="row">
-					{!!people &&
-						people.length > 0 &&
-						people.map((person, index) => {
+					{!!species &&
+						species.length > 0 &&
+						species.map((specie, index) => {
 							//console.log(film.properties.director);
 							return (
 								<div key={index} className="col-4 p-3">
-									<Card title={person.name} />
+									<Card title={specie.name} />
 								</div>
 							);
 						})}

@@ -11,10 +11,10 @@ import { Footer } from "./component/footer";
 
 import Films from "./views/films";
 import People from "./views/people";
-import Planets from "./views/planet";
-import Species from "./views/specie";
+import Planets from "./views/planets";
+import Species from "./views/species";
 import Starships from "./views/starships";
-import Vehicles from "./views/vehicle";
+import Vehicles from "./views/vehicles";
 
 //create your first component
 const Layout = () => {
