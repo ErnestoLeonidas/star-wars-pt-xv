@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import Starship from "../component/cardStarShips";
+import Card from "../component/card";
 import { Context } from "../store/appContext";
 
 export default function Starships() {
@@ -20,10 +20,11 @@ export default function Starships() {
 							//console.log(film.properties.director);
 							return (
 								<div key={index} className="col-4 p-3">
-									<Starship uid={starship.uid} name={starship.name} url={starship.url} />
+									<Card uid={starship.uid} title={starship.name} url={starship.url} />
 								</div>
 							);
-						})}git lock
+						})}
+					git lock
 				</div>
 			</div>
 		</div>
