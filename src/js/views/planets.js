@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 export default function Planets() {
 	const { store } = useContext(Context);
 	const { planets } = store;
-	
+
 	return (
 		<div>
 			<div className="container-fluid">

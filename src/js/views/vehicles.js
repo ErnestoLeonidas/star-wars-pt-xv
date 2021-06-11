@@ -10,7 +10,7 @@ export default function Vehicles() {
 		<div>
 			<div className="container-fluid">
 				<div className="row justify-content-center swfont">
-					<h1>Vehicles</h1>
+					<h1>vehicles</h1>
 				</div>
 				<div className="row">
 					{!!vehicles &&
