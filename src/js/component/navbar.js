@@ -11,20 +11,23 @@ export const Navbar = () => {
 				{/* <img className="swlogo" src={swLogo} /> */}
 			</Link>
 			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-outline-warning mr-2 swfont">Demo</button>
-				</Link>
-				<Link to="/root">
-					<button className="btn btn-outline-warning mr-2 swfont">Root</button>
+				<Link to="/films">
+					<button className="btn btn-outline-warning mr-2 swfont">Films</button>
 				</Link>
 				<Link to="/people">
 					<button className="btn btn-outline-warning mr-2 swfont">People</button>
 				</Link>
-				<Link to="/films">
-					<button className="btn btn-outline-warning mr-2 swfont">Films</button>
+				<Link to="/planets">
+					<button className="btn btn-outline-warning mr-2 swfont">Planets</button>
+				</Link>
+				<Link to="/species">
+					<button className="btn btn-outline-warning mr-2 swfont">Species</button>
 				</Link>
 				<Link to="/starships">
 					<button className="btn btn-outline-warning mr-2 swfont">Star Ships</button>
+				</Link>
+				<Link to="/vehicles">
+					<button className="btn btn-outline-warning mr-2 swfont">vehicles</button>
 				</Link>
 
 				<span className="dropdown">

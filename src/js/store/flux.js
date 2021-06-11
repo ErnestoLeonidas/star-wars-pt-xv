@@ -54,6 +54,48 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(() => {});
 			},
 
+			getPeople: url => {
+				console.log(url);
+				fetch(url, {})
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						//console.log(data.result);
+						setStore({ people: data.results });
+					})
+					.catch(() => {});
+			},
+
+			getPlanets: url => {
+				console.log(url);
+				fetch(url, {})
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						//console.log(data.result);
+						setStore({ planets: data.results });
+					})
+					.catch(() => {});
+			},
+
+			getSpecies: url => {
+				console.log(url);
+				fetch(url, {})
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						//console.log(data.result);
+						setStore({ species: data.results });
+					})
+					.catch(() => {});
+			},
+
 			getStarShips: url => {
 				console.log(url);
 				fetch(url, {})
@@ -64,6 +106,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => {
 						//console.log(data.result);
 						setStore({ starships: data.results });
+					})
+					.catch(() => {});
+			},
+
+			getVehicles: url => {
+				console.log(url);
+				fetch(url, {})
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						//console.log(data.result);
+						setStore({ vehicles: data.results });
 					})
 					.catch(() => {});
 			}

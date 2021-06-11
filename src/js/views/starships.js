@@ -24,7 +24,6 @@ export default function Starships() {
 								</div>
 							);
 						})}
-					git lock
 				</div>
 			</div>
 		</div>
