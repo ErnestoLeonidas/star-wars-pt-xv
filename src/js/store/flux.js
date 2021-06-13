@@ -1,124 +1,94 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
-			films: null
+			films: null,
+			film: null,
+			people: null,
+			planets: null,
+			species: null,
+			starships: null,
+			vehicles: null
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
-			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
-			},
-
 			getFilms: url => {
-				console.log(url);
 				fetch(url, {})
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
 						return response.json();
 					})
 					.then(data => {
-						//console.log(data.result);
 						setStore({ films: data.result });
 					})
 					.catch(() => {});
 			},
 
+			getFilmById: (url, id) => {
+				fetch(`${url}/${id}`)
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						setStore({ film: data.result });
+					})
+					.catch(() => {});
+			},
+
 			getPeople: url => {
-				console.log(url);
 				fetch(url, {})
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
 						return response.json();
 					})
 					.then(data => {
-						//console.log(data.result);
 						setStore({ people: data.results });
 					})
 					.catch(() => {});
 			},
 
 			getPlanets: url => {
-				console.log(url);
 				fetch(url, {})
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
 						return response.json();
 					})
 					.then(data => {
-						//console.log(data.result);
 						setStore({ planets: data.results });
 					})
 					.catch(() => {});
 			},
 
 			getSpecies: url => {
-				console.log(url);
 				fetch(url, {})
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
 						return response.json();
 					})
 					.then(data => {
-						//console.log(data.result);
 						setStore({ species: data.results });
 					})
 					.catch(() => {});
 			},
 
 			getStarShips: url => {
-				console.log(url);
 				fetch(url, {})
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
 						return response.json();
 					})
 					.then(data => {
-						//console.log(data.result);
 						setStore({ starships: data.results });
 					})
 					.catch(() => {});
 			},
 
 			getVehicles: url => {
-				console.log(url);
 				fetch(url, {})
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
 						return response.json();
 					})
 					.then(data => {
-						//console.log(data.result);
 						setStore({ vehicles: data.results });
 					})
 					.catch(() => {});

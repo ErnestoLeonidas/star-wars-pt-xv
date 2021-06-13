@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+
 import Card from "../component/card";
 import { Context } from "../store/appContext";
 
@@ -24,6 +25,8 @@ export default function Films() {
 										episode={film.properties.episode_id}
 										director={film.properties.director}
 										release_date={film.properties.release_date}
+										uid={film.uid}
+										route={"film"}
 									/>
 								</div>
 							);

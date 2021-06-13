@@ -56,6 +56,20 @@ body{
     color: white;
 }
 
+.jumbotron {
+  border-color: #edec51;
+  border-width: 1px;
+  background-color:  rgba(40, 39, 39, 0.7);
+  // background-color: #282727 ;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+
+hr {
+  border: 1px solid yellow;
+}
+
 .btn-card {
     border-color: greenyellow;
     font-family: Helvetica, Arial, sans-serif;

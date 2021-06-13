@@ -10,6 +10,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 import Films from "./views/films";
+import ViewFilm from "./views/viewFilm";
 import People from "./views/people";
 import Planets from "./views/planets";
 import Species from "./views/species";
@@ -24,7 +25,7 @@ const Layout = () => {
 
 	return (
 		<div className="d-flex flex-column">
-			<BrowserRouter basename={basename}>
+			<BrowserRouter>
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
@@ -36,6 +37,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/films">
 							<Films />
+						</Route>
+						<Route exact path="/film/:id">
+							<ViewFilm />
 						</Route>
 						<Route exact path="/people">
 							<People />

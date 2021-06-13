@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Card = prop => {
 	return (
@@ -15,9 +16,13 @@ export const Card = prop => {
 				{!!prop.episode ? <div className="row">Empisode: {prop.episode}</div> : ""}
 				{!!prop.director ? <div className="row">Director: {prop.director}</div> : ""}
 				{!!prop.release_date ? <div className="row">Release Date: {prop.release_date}</div> : ""}
+				{!!prop.uid ? <div className="row">UID: {prop.uid}</div> : ""}
+
 				{!!prop.name ? <div className="row">Name: {prop.name}</div> : ""}
 
-				<div className="btn btn-outline-info mt-2">Learn more!</div>
+				<Link to={`/${prop.route}/${prop.uid}`} className="btn btn-outline-info mt-2">
+					Learn more!
+				</Link>
 			</div>
 		</div>
 	);
