@@ -22,6 +22,13 @@ const ViewStarship = () => {
 				<div className="lead">
 					<div className="row text-danger">
 						<div className="col">Starship class: {!!starship && starship.properties.starship_class}</div>
+						<div className="col">Manufacturer: {!!starship && starship.properties.manufacturer}</div>
+						<div className="col">Length: {!!starship && starship.properties.length}</div>
+						<div className="col">Crew: {!!starship && starship.properties.crew}</div>
+						<div className="col">Passengers: {!!starship && starship.properties.passengers}</div>
+						<div className="col">
+							Hyperdrive rating: {!!starship && starship.properties.hyperdrive_rating}
+						</div>
 					</div>
 				</div>
 			</div>
