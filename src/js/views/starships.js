@@ -20,7 +20,7 @@ export default function Starships() {
 							//console.log(film.properties.director);
 							return (
 								<div key={index} className="col-4 p-3">
-									<Card uid={starship.uid} title={starship.name} url={starship.url} />
+									<Card title={starship.name} uid={starship.uid} route={"starship"} />
 								</div>
 							);
 						})}

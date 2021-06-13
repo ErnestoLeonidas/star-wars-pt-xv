@@ -13,7 +13,7 @@ export const Card = prop => {
 				) : (
 					""
 				)}
-				{!!prop.episode ? <div className="row">Empisode: {prop.episode}</div> : ""}
+				{!!prop.episode ? <div className="row">Episode: {prop.episode}</div> : ""}
 				{!!prop.director ? <div className="row">Director: {prop.director}</div> : ""}
 				{!!prop.release_date ? <div className="row">Release Date: {prop.release_date}</div> : ""}
 				{!!prop.uid ? <div className="row">UID: {prop.uid}</div> : ""}

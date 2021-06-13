@@ -10,13 +10,18 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
 import Films from "./views/films";
-import ViewFilm from "./views/viewFilm";
-import ViewCharacter from "./views/viewCharacter";
 import People from "./views/people";
 import Planets from "./views/planets";
 import Species from "./views/species";
 import Starships from "./views/starships";
 import Vehicles from "./views/vehicles";
+
+import ViewFilm from "./views/viewFilm";
+import ViewCharacter from "./views/viewCharacter";
+import ViewPlanet from "./views/viewPlanet";
+import ViewSpecie from "./views/viewSpecie";
+import ViewStarship from "./views/viewStarship";
+import ViewVehicle from "./views/viewVehicle";
 
 //create your first component
 const Layout = () => {
@@ -51,14 +56,26 @@ const Layout = () => {
 						<Route exact path="/planets">
 							<Planets />
 						</Route>
+						<Route exact path="/planet/:id">
+							<ViewPlanet />
+						</Route>
 						<Route exact path="/species">
 							<Species />
+						</Route>
+						<Route exact path="/specie/:id">
+							<ViewSpecie />
 						</Route>
 						<Route exact path="/starships">
 							<Starships />
 						</Route>
+						<Route exact path="/starship/:id">
+							<ViewStarship />
+						</Route>
 						<Route exact path="/vehicles">
 							<Vehicles />
+						</Route>
+						<Route exact path="/vehicle/:id">
+							<ViewVehicle />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

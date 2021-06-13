@@ -19,7 +19,7 @@ export default function Planets() {
 							//console.log(film.properties.director);
 							return (
 								<div key={index} className="col-4 p-3">
-									<Card title={planet.name} />
+									<Card title={planet.name} uid={planet.uid} route={"planet"} />
 								</div>
 							);
 						})}

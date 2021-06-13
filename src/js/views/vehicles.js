@@ -19,7 +19,7 @@ export default function Vehicles() {
 							//console.log(film.properties.director);
 							return (
 								<div key={index} className="col-4 p-3">
-									<Card title={vehicle.name} />
+									<Card title={vehicle.name} uid={vehicle.uid} route={"vehicle"} />
 								</div>
 							);
 						})}

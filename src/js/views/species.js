@@ -19,7 +19,7 @@ export default function Species() {
 							//console.log(film.properties.director);
 							return (
 								<div key={index} className="col-4 p-3">
-									<Card title={specie.name} />
+									<Card title={specie.name} uid={specie.uid} route={"specie"} />
 								</div>
 							);
 						})}

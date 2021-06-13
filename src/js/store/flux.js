@@ -75,7 +75,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(() => {});
 			},
 
-			getPlanetsById: (url, id) => {
+			getPlanetById: (url, id) => {
 				fetch(`${url}/${id}`)
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
@@ -99,7 +99,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(() => {});
 			},
 
-			getSpeciesById: (url, id) => {
+			getSpecieById: (url, id) => {
 				fetch(`${url}/${id}`)
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
@@ -123,7 +123,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(() => {});
 			},
 
-			getStarShipsById: (url, id) => {
+			getStarShipById: (url, id) => {
 				fetch(`${url}/${id}`)
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
@@ -147,7 +147,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(() => {});
 			},
 
-			getVehiclesById: (url, id) => {
+			getVehicleById: (url, id) => {
 				fetch(`${url}/${id}`)
 					.then(response => {
 						if (!response.ok) setStore({ error: response.error });
