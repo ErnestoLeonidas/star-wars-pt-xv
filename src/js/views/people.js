@@ -16,11 +16,11 @@ export default function People() {
 				<div className="row">
 					{!!people &&
 						people.length > 0 &&
-						people.map((person, index) => {
+						people.map((character, index) => {
 							//console.log(film.properties.director);
 							return (
 								<div key={index} className="col-4 p-3">
-									<Card title={person.name} />
+									<Card title={character.name} uid={character.uid} route={"character"} />
 								</div>
 							);
 						})}

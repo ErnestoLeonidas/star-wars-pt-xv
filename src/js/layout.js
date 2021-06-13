@@ -11,6 +11,7 @@ import { Footer } from "./component/footer";
 
 import Films from "./views/films";
 import ViewFilm from "./views/viewFilm";
+import ViewCharacter from "./views/viewCharacter";
 import People from "./views/people";
 import Planets from "./views/planets";
 import Species from "./views/species";
@@ -43,6 +44,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/people">
 							<People />
+						</Route>
+						<Route exact path="/character/:id">
+							<ViewCharacter />
 						</Route>
 						<Route exact path="/planets">
 							<Planets />

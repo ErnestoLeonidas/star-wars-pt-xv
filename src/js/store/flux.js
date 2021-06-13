@@ -4,10 +4,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 			films: null,
 			film: null,
 			people: null,
+			character: null,
 			planets: null,
+			planet: null,
 			species: null,
+			specie: null,
 			starships: null,
-			vehicles: null
+			starship: null,
+			vehicles: null,
+			vehicle: null
 		},
 		actions: {
 			getFilms: url => {
@@ -46,6 +51,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(() => {});
 			},
 
+			getPeopleById: (url, id) => {
+				fetch(`${url}/${id}`)
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						setStore({ character: data.result });
+					})
+					.catch(() => {});
+			},
+
 			getPlanets: url => {
 				fetch(url, {})
 					.then(response => {
@@ -54,6 +71,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => {
 						setStore({ planets: data.results });
+					})
+					.catch(() => {});
+			},
+
+			getPlanetsById: (url, id) => {
+				fetch(`${url}/${id}`)
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						setStore({ planet: data.result });
 					})
 					.catch(() => {});
 			},
@@ -70,6 +99,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(() => {});
 			},
 
+			getSpeciesById: (url, id) => {
+				fetch(`${url}/${id}`)
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						setStore({ specie: data.result });
+					})
+					.catch(() => {});
+			},
+
 			getStarShips: url => {
 				fetch(url, {})
 					.then(response => {
@@ -82,6 +123,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(() => {});
 			},
 
+			getStarShipsById: (url, id) => {
+				fetch(`${url}/${id}`)
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						setStore({ starship: data.result });
+					})
+					.catch(() => {});
+			},
+
 			getVehicles: url => {
 				fetch(url, {})
 					.then(response => {
@@ -90,6 +143,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 					.then(data => {
 						setStore({ vehicles: data.results });
+					})
+					.catch(() => {});
+			},
+
+			getVehiclesById: (url, id) => {
+				fetch(`${url}/${id}`)
+					.then(response => {
+						if (!response.ok) setStore({ error: response.error });
+						return response.json();
+					})
+					.then(data => {
+						setStore({ vehicle: data.result });
 					})
 					.catch(() => {});
 			}
