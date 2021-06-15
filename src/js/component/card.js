@@ -25,7 +25,7 @@ export const Card = prop => {
 						Learn more!
 					</Link>
 
-					<button type="button" className="btn btn-outline-info mt-2">
+					<button type="button" className="btn btn-outline-success mt-2">
 						<i className="far fa-heart" />
 					</button>
 				</div>
